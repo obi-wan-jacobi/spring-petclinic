@@ -1,5 +1,9 @@
 #STAGE1: Base Image
 FROM openjdk:17-jdk-slim AS build
+RUN apt update && apt -y install locales && locale-gen en_US.UTF-8
+ENV LANG en_US.UTF-8
+ENV LANGUAGE en_US:en
+ENV LC_ALL en_US.UTF-8
 RUN apt-get update && \
     apt-get install -y maven unzip
 
