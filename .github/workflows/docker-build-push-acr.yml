@@ -25,4 +25,3 @@ jobs:
           context: .
           push: true
           tags: jlacr.azurecr.io/springmvcapp:latest
-
